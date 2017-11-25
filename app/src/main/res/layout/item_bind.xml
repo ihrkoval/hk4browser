@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:id="@+id/thread_item_LinerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/rounded_shape"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ThreadClosedImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/separateOrange"
+                android:paddingLeft="15dp" />
+            <!--app:srcCompat="@android:drawable/ic_secure"-->
+            <TextView
+                android:id="@+id/threadNumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ThreadClosedImageView"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="threadNum"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="10sp" />
+
+
+            <TextView
+                android:id="@+id/name_TexrView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/threadNumTextView"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="name"
+                android:textColor="@android:color/background_light"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/postCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/name_TexrView"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="posts"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/filesCount_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/postCountTextView"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="files"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/email_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/filesCount_TextView"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="email"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/date_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="2dp"
+                android:paddingRight="10dp"
+                android:text="date"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/trip_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="2dp"
+                android:paddingRight="7dp"
+                android:text="trip"
+                android:textColor="@android:color/holo_purple"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/subject_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/trip_TextView"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="subject"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/files_recycleview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/coment_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp"
+            android:text="TEXT TEXT TEXT"
+            android:textColor="#4880ca"
+            android:textSize="13dp" />
+
+
+    </LinearLayout>
+</layout>
